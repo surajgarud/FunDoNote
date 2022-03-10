@@ -11,3 +11,6 @@ C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\Re
 C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.csproj.CopyComplete
 C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.dll
 C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.pdb
+C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.runtimeconfig.json
+C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.runtimeconfig.dev.json
+C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.genruntimeconfig.cache

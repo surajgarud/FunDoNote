@@ -1,0 +1,46 @@
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\FunDo notes.exe
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\FunDo notes.deps.json
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\FunDo notes.runtimeconfig.json
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\FunDo notes.runtimeconfig.dev.json
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\FunDo notes.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\FunDo notes.pdb
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\BusinessLayer.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\CommonLayer.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\RepositoryLayer.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\BusinessLayer.pdb
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\CommonLayer.pdb
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\RepositoryLayer.pdb
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.csproj.AssemblyReference.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.AssemblyInfoInputs.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.AssemblyInfo.cs
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.csproj.CoreCompileInputs.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\staticwebassets\FunDo notes.StaticWebAssets.Manifest.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.RazorTargetAssemblyInfo.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.csproj.CopyComplete
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.pdb
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.genruntimeconfig.cache
