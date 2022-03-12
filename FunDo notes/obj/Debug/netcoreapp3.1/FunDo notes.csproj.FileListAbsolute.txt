@@ -44,3 +44,16 @@ C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo 
 C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.dll
 C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.pdb
 C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.genruntimeconfig.cache
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\obj\Debug\netcoreapp3.1\FunDo notes.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

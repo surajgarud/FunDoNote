@@ -15,6 +15,20 @@ namespace BusinessLayer.Service
         {
             this.userRL = userRL;
         }
+
+        public string login(UserLogin userlogin)
+        {
+            try
+            {
+                return userRL.login(userlogin);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public userEntity Registrartion(UserRegistration User)
         {
             try
