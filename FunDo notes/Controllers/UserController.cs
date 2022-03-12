@@ -53,5 +53,22 @@ namespace FunDo_notes.Controllers
                 throw;
             }
         }
+        [HttpPost("ForgetPassword")]
+        public IActionResult ForgetPassword(string Email)
+        {
+            try
+            {
+                var result = userBL.ForgetPassword(Email);
+                if (result != null)
+                    return this.Ok(new { success = true, message = "Mail Sent Successful"});
+                else
+                    return this.BadRequest(new { success = false, message = "Mail Sent UnSuccessful"});
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
     }
 }

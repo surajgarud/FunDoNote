@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "RPJgltwDg2p+c24sfFHu6kNBbSo/94JKHb854/2YuoFGfc7K4C5QTKu5g7WXeNx2s8uSXxHLv30tTvXjqeg0Ng==",
+  "dgSpecHash": "Sn/s7vEUKlPM7MyHEy1RWae5sae208VYRNclRmA/X1rukF7T0qfTa436JfeZENBGVeDsCeFpToKuCR2HyGwReg==",
   "success": true,
   "projectFilePath": "C:\\Users\\suraj\\source\\CFP\\FunDo notes\\CommonLayer\\CommonLayer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\suraj\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512"
+  ],
   "logs": []
 }

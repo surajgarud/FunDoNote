@@ -38,7 +38,7 @@ namespace RepositoryLayer.Service
                 if (result > 0)
                     return userentity;
                 else
-                    return null; 
+                    return null;
             }
             catch (Exception)
             {
@@ -80,6 +80,29 @@ namespace RepositoryLayer.Service
             return new JwtSecurityTokenHandler().WriteToken(token);
 
         }
+        public string ForgetPassword(string Email)
+        {
+            try
+            {
+                    var user = funDoContext.User.Where(x => x.Email == Email).FirstOrDefault();
+                    if (user != null)
+                    {
+                       var token = GenerateSecurityToken(user.Email, user.Id);
+                        new MSMQModel().send(token);
+                        return token;
+                    }
+                    else
+                    {
+                        return null;
+                    }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
 
     }
 }
