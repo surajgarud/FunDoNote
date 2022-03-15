@@ -58,3 +58,5 @@ C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Micros
 C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\Experimental.System.Messaging.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\DocumentFormat.OpenXml.dll
+C:\Users\suraj\source\CFP\FunDo notes\FunDo notes\bin\Debug\netcoreapp3.1\System.IO.Packaging.dll

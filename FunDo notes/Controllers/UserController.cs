@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace FunDo_notes.Controllers
@@ -24,6 +25,7 @@ namespace FunDo_notes.Controllers
         {
             try
             {
+
                 var result = userBL.Registrartion(user);
                 if (result != null)
                     return this.Ok(new { success = true, message = "Registration Successful", data = result });
@@ -63,6 +65,25 @@ namespace FunDo_notes.Controllers
                     return this.Ok(new { success = true, message = "Mail Sent Successful"});
                 else
                     return this.BadRequest(new { success = false, message = "Mail Sent UnSuccessful"});
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        [HttpPut("ResetPassword")]
+        public IActionResult ResetPassword(string Password,string ConfirmPassword)
+        {
+            try
+            {
+                var Email = User.FindFirst(ClaimTypes.Email).Value.ToString();
+                var user = userBL.ResetPassword(Email,Password,ConfirmPassword);
+                if (!user)
+                    return this.BadRequest(new { success = false, message = "Enter Valid Password" });
+                else
+                    return this.Ok(new { success = true, message = "Password Reset Successful" });
+
             }
             catch (Exception)
             {

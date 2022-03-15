@@ -102,6 +102,28 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
+        public bool ResetPassword(string Email, String Password, string ConfirmPassword)
+        {
+            try
+            {
+                if (Password.Equals(ConfirmPassword))
+                {
+                    var user = funDoContext.User.Where(x => x.Email == Email).FirstOrDefault();
+                    user.Password = ConfirmPassword;
+                    funDoContext.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
 
 
     }
