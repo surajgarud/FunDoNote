@@ -42,6 +42,12 @@ namespace FunDo_notes
             services.AddTransient<INotesRL, NotesRL>();
             services.AddSwaggerGen();
             services.AddSwaggerGen();
+            services.AddSwaggerGen(o => o.SwaggerDoc("v2", new OpenApiInfo
+            {
+                Title = "MyApi",
+                Version = "v2",
+            }));
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Fundoo-Notes", Version = "v1" });
@@ -110,6 +116,10 @@ namespace FunDo_notes
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "FunDoo notes");
+            });
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v2/swagger.json", "FunDoo notes");
             });
         }
     }

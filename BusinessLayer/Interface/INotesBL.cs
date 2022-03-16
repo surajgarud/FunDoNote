@@ -1,6 +1,8 @@
 ﻿using CommonLayer.Model;
 using DocumentFormat.OpenXml.ExtendedProperties;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.entity;
+using RepositoryLayer.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +17,8 @@ namespace BusinessLayer.Interface
         public bool Delete(long NotesId);
         public bool IsPin(long NotesId, long userId);
         public bool IsArchieve(long NotesId, long userId);
-        public bool IsTrash(long NotesId);
+        public bool IsTrash(long NotesId, long userId);
+        public NotesEntity UploadImage(long NotesId, long userId, IFormFile image);
+        public bool ChangeColor(long NotesId, long userId, ChangeColour notesModel);
     }
 }

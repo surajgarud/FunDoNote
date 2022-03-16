@@ -1,8 +1,10 @@
 ﻿using BusinessLayer.Interface;
 using CommonLayer.Model;
 using DocumentFormat.OpenXml.ExtendedProperties;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.entity;
 using RepositoryLayer.Interface;
+using RepositoryLayer.Migrations;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -16,6 +18,20 @@ namespace BusinessLayer.Service
         {
             this.NotesRL = NotesRL;
         }
+
+        public bool ChangeColor(long NotesId, long userId, ChangeColour notesModel)
+        {
+            try
+            {
+                return NotesRL.ChangeColor(NotesId, userId, notesModel);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public NotesEntity CreateNote(NotesModel Notes, long userId)
         {
                 try
@@ -58,7 +74,7 @@ namespace BusinessLayer.Service
         {
             try
             {
-                return NotesRL.IsPin(NotesId, userId);
+                return NotesRL.IsPin(NotesId,userId);
             }
             catch (Exception)
             {
@@ -67,11 +83,11 @@ namespace BusinessLayer.Service
             }
         }
 
-        public bool IsTrash(long NotesId)
+        public bool IsTrash(long NotesId, long userId)
         {
             try
             {
-                return NotesRL.IsTrash(NotesId);
+                return NotesRL.IsTrash(NotesId, userId);
             }
             catch (Exception)
             {
@@ -85,7 +101,7 @@ namespace BusinessLayer.Service
         {
             try
             {
-                return NotesRL.IsPin(NotesId);
+                return NotesRL.Retrieve(NotesId);
             }
             catch (Exception)
             {
@@ -99,6 +115,19 @@ namespace BusinessLayer.Service
             try
             {
                 return NotesRL.UpdateNote(updateNote, NotesId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public NotesEntity UploadImage(long NotesId, long userId, IFormFile image)
+        {
+            try
+            {
+                return NotesRL.UploadImage(NotesId, userId,image);
             }
             catch (Exception)
             {

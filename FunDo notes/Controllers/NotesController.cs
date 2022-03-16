@@ -29,7 +29,7 @@ namespace FunDo_notes.Controllers
                 var result = NotesBL.CreateNote(Notes, userId);
 
                 if (result != null)
-                    return this.Ok(new { success = true, message = "Create Note Successful",data = result });
+                    return this.Ok(new { success = true, message = "Create Note Successful", data = result });
                 else
                     return this.BadRequest(new { success = false, message = " Note Creation UnSuccessful", data = result });
             }
@@ -96,20 +96,20 @@ namespace FunDo_notes.Controllers
                 throw;
             }
         }
-        [HttpPut("Pinned")]
-        public IActionResult IsPin(long NotesId, long userID)
+        [HttpPut("IsPinned")]
+        public IActionResult IsPin(long NotesId)
         {
-            bool result = NotesBL.IsPin(NotesId, userID);
-
             try
             {
+                var userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+                bool result = this.NotesBL.IsPin(NotesId, userId);
                 if (result == true)
                 {
-                    return Ok(new { Success = true, message = "Successful" });
+                    return Ok(new { Success = true, message = "Pinned Successful" });
                 }
                 else
                 {
-                    return BadRequest(new { Success = false, message = "Unsuccessful" });
+                    return BadRequest(new { Success = false, message = "Pinned Unsuccessful" });
                 }
             }
             catch (Exception)
@@ -117,20 +117,21 @@ namespace FunDo_notes.Controllers
                 throw;
             }
         }
-        [HttpPut("Archieve")]
-        public IActionResult IsArchieve(long NotesId, long userID)
+        [HttpPut("IsArchieve")]
+        public IActionResult IsArchieve(long NotesId)
         {
-            bool result = NotesBL.IsArchieve(NotesId, userID);
 
             try
             {
+                var userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+                bool result = this.NotesBL.IsArchieve(NotesId, userId);
                 if (result == true)
                 {
-                    return Ok(new { Success = true, message = "Successful" });
+                    return Ok(new { Success = true, message = "Archieve Is Successful" });
                 }
                 else
                 {
-                    return BadRequest(new { Success = false, message = "Unsuccessful" });
+                    return BadRequest(new { Success = false, message = "Archieve Is Unsuccessful" });
                 }
             }
             catch (Exception)
@@ -138,20 +139,68 @@ namespace FunDo_notes.Controllers
                 throw;
             }
         }
-        [HttpPut("Trash")]
+        [HttpPut("IsTrash")]
         public IActionResult IsTrash(long NotesId)
         {
-            bool result = NotesBL.IsTrash(NotesId);
+
+            try
+            {
+                var userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+                bool result = this.NotesBL.IsArchieve(NotesId, userId);
+                if (result == true)
+                {
+                    return Ok(new { Success = true, message = "Trash Is Successful" });
+                }
+                else
+                {
+                    return BadRequest(new { Success = false, message = "Trash Is Unsuccessful" });
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        [HttpPost("UploadImage")]
+        public IActionResult UploadImage(long NotesId, IFormFile image)
+        {
+            try
+            {
+                // Authorise user by userId
+                var userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+                var result = this.NotesBL.UploadImage(NotesId, userId, image);
+                if (result != null)
+                {
+                    return this.Ok(new { Success = true, message = "Image Uploaded Successfully", data = result });
+
+
+                }
+                else
+                {
+                    return this.BadRequest(new { Success = false, message = "Image Upload Failed ! Try Again " });
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+
+        }
+        [HttpPut("Colour")]
+        public IActionResult ChangeColor(long noteId, ChangeColour notesModel)
+        {
+            var userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+            bool result = NotesBL.ChangeColor(noteId, userId, notesModel);
 
             try
             {
                 if (result == true)
                 {
-                    return Ok(new { Success = true, message = "Successful" });
+                    return Ok(new { Success = true, message = "Color changed Successfully !!" });
                 }
                 else
                 {
-                    return BadRequest(new { Success = false, message = "Unsuccessful" });
+                    return BadRequest(new { Success = false, message = "Color not changed !!" });
                 }
             }
             catch (Exception)

@@ -1,10 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Sn/s7vEUKlPM7MyHEy1RWae5sae208VYRNclRmA/X1rukF7T0qfTa436JfeZENBGVeDsCeFpToKuCR2HyGwReg==",
+  "dgSpecHash": "h6O1pLdL7jbB/z901tT+YbGdazBSonydLYBmh2UWYhclaELNmt06gmjGcenSPdZ7PsG5MLnJch6uoTFAOyDLkA==",
   "success": true,
   "projectFilePath": "C:\\Users\\suraj\\source\\CFP\\FunDo notes\\CommonLayer\\CommonLayer.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\suraj\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512"
+    "C:\\Users\\suraj\\.nuget\\packages\\experimental.system.messaging\\1.1.0\\experimental.system.messaging.1.1.0.nupkg.sha512",
+    "C:\\Users\\suraj\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.15\\microsoft.aspnetcore.http.features.5.0.15.nupkg.sha512",
+    "C:\\Users\\suraj\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\suraj\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512",
+    "C:\\Users\\suraj\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
   ],
   "logs": []
 }
