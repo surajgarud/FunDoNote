@@ -40,6 +40,8 @@ namespace FunDo_notes
             services.AddTransient<IuserRL, userRL>();
             services.AddTransient<INotesBL, NotesBL>();
             services.AddTransient<INotesRL, notesRL>();
+            services.AddTransient<ILabelBL, LabelBL>();
+            services.AddTransient<ILabelRL, LabelRL>();
             services.AddTransient<ICollaboratorRL, CollaboratorRL>();
             services.AddTransient<ICollaboratorBL, CollaboratorBL>();
 

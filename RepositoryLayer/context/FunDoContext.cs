@@ -7,7 +7,7 @@ using System.Text;
 namespace RepositoryLayer.context
 {
    public class FunDoContext : DbContext
-    {
+   {
         public FunDoContext(DbContextOptions options)
             : base(options)
         {
@@ -15,6 +15,7 @@ namespace RepositoryLayer.context
         public DbSet<userEntity> User { get; set; }
         public DbSet<NotesEntity> Notes { get; set; }
         public DbSet<CollaboratorEntity> CollabTable { get; set; }
-    }
+        public DbSet<LabelEntity> Label { get; set; }
+   }
 
 }
