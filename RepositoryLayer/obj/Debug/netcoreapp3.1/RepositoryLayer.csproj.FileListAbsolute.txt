@@ -14,3 +14,5 @@ C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\Re
 C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.runtimeconfig.json
 C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\bin\Debug\netcoreapp3.1\RepositoryLayer.runtimeconfig.dev.json
 C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\obj\Debug\netcoreapp3.1\RepositoryLayer.genruntimeconfig.cache
+C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\bin\Debug\netcoreapp3.1\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\suraj\source\CFP\FunDo notes\RepositoryLayer\bin\Debug\netcoreapp3.1\Cosmos.CRTCompat.dll

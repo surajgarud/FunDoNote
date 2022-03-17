@@ -13,3 +13,5 @@ C:\Users\suraj\source\CFP\FunDo notes\BusinessLayer\obj\Debug\netcoreapp3.1\Busi
 C:\Users\suraj\source\CFP\FunDo notes\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.csproj.CopyComplete
 C:\Users\suraj\source\CFP\FunDo notes\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.dll
 C:\Users\suraj\source\CFP\FunDo notes\BusinessLayer\obj\Debug\netcoreapp3.1\BusinessLayer.pdb
+C:\Users\suraj\source\CFP\FunDo notes\BusinessLayer\bin\Debug\netcoreapp3.1\Microsoft.Azure.Cosmos.ServiceInterop.dll
+C:\Users\suraj\source\CFP\FunDo notes\BusinessLayer\bin\Debug\netcoreapp3.1\Cosmos.CRTCompat.dll

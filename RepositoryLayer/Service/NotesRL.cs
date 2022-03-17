@@ -18,14 +18,14 @@ using Account = CloudinaryDotNet.Account;
 
 namespace RepositoryLayer.Service
 {
-    public class NotesRL : INotesRL
+    public class notesRL : INotesRL
     {
         private readonly FunDoContext funDoContext;
         //
         private readonly IConfiguration _config;
 
         //Constructor
-        public NotesRL(FunDoContext fundooContext, IConfiguration _config)
+        public notesRL(FunDoContext fundooContext, IConfiguration _config)
         {
             this.funDoContext = fundooContext;
             this._config = _config;
@@ -248,9 +248,7 @@ namespace RepositoryLayer.Service
                     this.funDoContext.Notes.Update(note);
                     int upload = this.funDoContext.SaveChanges();
                     if (upload > 0)
-                    {
                         return note;
-                    }
                     else
                     {
                         return null;

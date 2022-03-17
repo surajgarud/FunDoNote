@@ -1,4 +1,6 @@
 ﻿using CommonLayer.Model;
+using Microsoft.Azure.Cosmos;
+using Microsoft.Azure.Cosmos.Serialization.HybridRow;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using RepositoryLayer.context;
@@ -11,17 +13,25 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using Xamarin.Essentials;
 
 namespace RepositoryLayer.Service
 {
     public class userRL : IuserRL
     {
         private readonly FunDoContext funDoContext;
-        private readonly IConfiguration _Toolsettings;
-        public userRL(FunDoContext funDoContext, IConfiguration _Toolsettings)
+        private readonly IConfiguration configuration;
+        public userRL(FunDoContext funDoContext, IConfiguration configuration)
         {
             this.funDoContext = funDoContext;
-            this._Toolsettings = _Toolsettings;
+            this.configuration = configuration;
+        }
+
+        public userEntity GetEmail(string Email)
+        {
+            var result = funDoContext.User.FirstOrDefault(e => e.Email == Email);
+
+            return result;
         }
 
         public userEntity Registrartion(UserRegistration User)
@@ -66,14 +76,14 @@ namespace RepositoryLayer.Service
         }
         private string GenerateSecurityToken(string Email, long Id)
         {
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_Toolsettings["Jwt:secretkey"]));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["Jwt:secretkey"]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
             var claims = new[] {
                 new Claim(ClaimTypes.Email,Email),
                 new Claim("Id",Id.ToString())
             };
-            var token = new JwtSecurityToken(_Toolsettings["Jwt:Issuer"],
-              _Toolsettings["Jwt:Issuer"],
+            var token = new JwtSecurityToken(configuration["Jwt:Issuer"],
+              configuration["Jwt:Issuer"],
               claims,
               expires: DateTime.Now.AddMinutes(60),
               signingCredentials: credentials);
@@ -102,6 +112,7 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
+        
         public bool ResetPassword(string Email, String Password, string ConfirmPassword)
         {
             try
@@ -124,7 +135,6 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
-
 
     }
 }
