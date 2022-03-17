@@ -68,5 +68,46 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
+        public List<LabelEntity> GetByLabelId(long noteId)
+        {
+            try
+            {
+                var data = this.funDoContext.Label.Where(c => c.NotesId == noteId).ToList();
+                if (data != null)
+                {
+                    return data;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        public bool RemoveLabel(long labelId, long userId)
+        {
+            try
+            {
+                var labelDetails = this.funDoContext.Label.FirstOrDefault(l => l.LabelId == labelId && l.Id == userId);
+                if (labelDetails != null)
+                {
+                    this.funDoContext.Label.Remove(labelDetails);
+
+                    this.funDoContext.SaveChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }
