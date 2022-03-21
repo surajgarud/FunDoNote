@@ -203,6 +203,26 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
+        public List<NotesEntity> GetAllNotes()
+        {
+            try
+            {
+                // Fetch All the details from Notes Table
+                var notes = this.funDoContext.Notes.ToList();
+                if (notes != null)
+                {
+                    return notes;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
 
         public NotesEntity Retrieve(long NotesId)
         {

@@ -44,6 +44,11 @@ namespace FunDo_notes
             services.AddTransient<ILabelRL, LabelRL>();
             services.AddTransient<ICollaboratorRL, CollaboratorRL>();
             services.AddTransient<ICollaboratorBL, CollaboratorBL>();
+            services.AddMemoryCache();
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = "localhost:6379";
+            });
 
             services.AddSwaggerGen();
             services.AddSwaggerGen();

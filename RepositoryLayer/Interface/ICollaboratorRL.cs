@@ -11,5 +11,6 @@ namespace RepositoryLayer.Interface
         public CollaboratorEntity AddCollaborator(CollaboratorModel collabModel);
         public CollaboratorEntity DeleteCollab(long userId, long collabId);
         public List<CollaboratorEntity> GetByNoteId(long noteId, long userId);
+        public List<CollaboratorEntity> GetAllCollab();
     }
 }

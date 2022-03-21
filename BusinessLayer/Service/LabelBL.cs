@@ -27,6 +27,7 @@ namespace BusinessLayer.Service
             }
         }
 
+
         public List<LabelEntity> GetByLabelId(long noteId)
         {
             try
@@ -58,6 +59,19 @@ namespace BusinessLayer.Service
             try
             {
                 return this.labelRL.UpdateLabel(labelName, NotesId, userId);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        List<LabelEntity> ILabelBL.GetAllLabels()
+        {
+            try
+            {
+                return this.labelRL.GetAllLabels();
             }
             catch (Exception)
             {

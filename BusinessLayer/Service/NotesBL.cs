@@ -58,6 +58,19 @@ namespace BusinessLayer.Service
             }
         }
 
+        public List<NotesEntity> GetAllNotes()
+        {
+            try
+            {
+                return NotesRL.GetAllNotes();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public bool IsArchieve(long NotesId, long userId)
         {
             try

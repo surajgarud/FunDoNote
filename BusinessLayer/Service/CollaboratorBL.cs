@@ -43,6 +43,20 @@ namespace BusinessLayer.Service
             }
         }
 
+        public List<CollaboratorEntity> GetAllCollab()
+        {
+            try
+            {
+                return this.CollabRL.GetAllCollab();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+
         public List<CollaboratorEntity> GetByNoteId(long noteId, long userId)
         {
             try

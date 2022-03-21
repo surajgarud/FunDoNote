@@ -88,5 +88,25 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
+        public List<CollaboratorEntity> GetAllCollab()
+        {
+            try
+            {
+                // Fetch All the details from Collab Table
+                var collabs = this.funDoContext.CollabTable.ToList();
+                if (collabs != null)
+                {
+                    return collabs;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

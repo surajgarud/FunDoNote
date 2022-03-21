@@ -3,10 +3,14 @@ using CommonLayer.Model;
 using DocumentFormat.OpenXml.ExtendedProperties;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
+using Newtonsoft.Json;
 using RepositoryLayer.entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace FunDo_notes.Controllers
@@ -15,10 +19,14 @@ namespace FunDo_notes.Controllers
     [ApiController]
     public class NotesController : ControllerBase
     {
+        private readonly IMemoryCache memoryCache;
+        private readonly IDistributedCache distributedCache;
         private readonly INotesBL NotesBL;
-        public NotesController(INotesBL NotesBL)
+        public NotesController(INotesBL NotesBL, IMemoryCache memoryCache, IDistributedCache distributedCache)
         {
             this.NotesBL = NotesBL;
+            this.memoryCache = memoryCache;
+            this.distributedCache = distributedCache;
         }
         [HttpPost("CreateNote")]
         public IActionResult CreateNote(NotesModel Notes)
@@ -56,12 +64,12 @@ namespace FunDo_notes.Controllers
                 throw;
             }
         }
-        [HttpGet("{id}/Get")]
-        public NotesEntity Retrieve(long NotesId)
+        [HttpGet("GetAllNotes")]
+        public List<NotesEntity> GetAllNotes()
         {
             try
             {
-                var result = this.NotesBL.Retrieve(NotesId);
+                var result = this.NotesBL.GetAllNotes();
                 if (result != null)
                 {
                     return result;
@@ -75,6 +83,52 @@ namespace FunDo_notes.Controllers
             {
                 throw;
             }
+        }
+        [HttpGet("{id}/Get")]
+        public NotesEntity Retrieve(long NotesId)
+        {
+            try
+            {
+                long userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+                var result = NotesBL.Retrieve(NotesId);
+                if (result != null)
+                {
+                    return result;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        [HttpGet("redis")]
+        public async Task<IActionResult> GetAllNotesUsingRedisCache()
+        {
+            var cacheKey = "NotesList";
+            string serializedNotesList;
+            var NotesList = new List<NotesEntity>();
+            var redisNotesList = await distributedCache.GetAsync(cacheKey);
+            if (redisNotesList != null)
+            {
+                serializedNotesList = Encoding.UTF8.GetString(redisNotesList);
+                NotesList = JsonConvert.DeserializeObject<List<NotesEntity>>(serializedNotesList);
+            }
+            else
+            {
+                //long userId = Convert.ToInt32(User.Claims.FirstOrDefault(e => e.Type == "Id").Value);
+                NotesList = (List<NotesEntity>) this.NotesBL.GetAllNotes();
+                serializedNotesList = JsonConvert.SerializeObject(NotesList);
+                redisNotesList = Encoding.UTF8.GetBytes(serializedNotesList);
+                var options = new DistributedCacheEntryOptions()
+                    .SetAbsoluteExpiration(DateTime.Now.AddMinutes(10))
+                    .SetSlidingExpiration(TimeSpan.FromMinutes(2));
+                await distributedCache.SetAsync(cacheKey, redisNotesList, options);
+            }
+            return Ok(NotesList);
         }
         [HttpDelete("Delete")]
         public IActionResult Delete(long NotesId)

@@ -68,6 +68,26 @@ namespace RepositoryLayer.Service
                 throw;
             }
         }
+        public List<LabelEntity> GetAllLabels()
+        {
+            try
+            {
+                // Fetch All the details from Notes Table
+                var notes = this.funDoContext.Label.ToList();
+                if (notes != null)
+                {
+                    return notes;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
         public List<LabelEntity> GetByLabelId(long noteId)
         {
             try
